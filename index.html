@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+
+</head>
+<body>
+    <div>
+      
+        <img onmouseover="kac()" onclick="alert('Bırak beni!')"  id="tavuk" src=".\images\Animals-Chicken-icon.png" alt="Chicken" height="50px"; width="50px";  style="position:absolute;"/>
+    </div>
+
+    
+
+
+
+
+    <script>
+
+        var tavuk = document.getElementById("tavuk");
+        var width = 0;
+        var height = 0;
+        var rndx = 0;
+        var rndy = 0;
+
+        function docSize() {
+
+            width = document.body.clientWidth - parseInt(tavuk.clientWidth); // gördüğüm alandan tavuğun alanını çıkardım. 
+
+            height = document.body.clientHeight - parseInt(tavuk.clientHeight);
+        }
+
+        function rndPos() {
+            docSize();
+            rndx = Math.floor(Math.random() * width);           //random width ile gidebileceği max alanı sınırlamış oldum. Böylece ekran dışına çıkamayacak. 
+            rndy = Math.floor(Math.random() * height);         
+        }
+
+        function kac() {
+            rndPos();
+
+            tavuk.style.top = 0;
+            tavuk.style.top = 0;
+
+            if (rndx<0) {
+                rndx = rndx 
+            }
+
+            tavuk.style.top = rndy + "px";
+            tavuk.style.top = rndx + "px";
+        }
+        kac();
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>
